@@ -5,13 +5,24 @@
   &__container {
     display: flex;
     align-items: center;
+    background-color: var(--triary-color);
   }
 
   &__logo {
     @extend %link;
     /* Цвет и отступ логотипа в шапке  */
-    margin-right: 93px;
     color: var(--logo-color);
+    @media screen and (max-width: 767px) {
+      padding: 16px 0;
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-right: 88px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 93px;
+    }
   }
 }
 
@@ -19,55 +30,68 @@
 .nav,
 .contacts {
   @extend %list;
-
-  /* Расположение элементов шапки */
   display: flex;
-  margin-left: auto;
-  gap: 50px;
+  flex-direction: column;
+  gap: 32px;
 
-  /* Шрифт шапки */
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  @media screen and (min-width: 768px) {
+    /* Расположение элементов шапки */
+    flex-direction: row;
+    margin-left: auto;
+    gap: 50px;
 
-  /* Уникальный символьный интервал в шапке */
-  letter-spacing: 0.02em;
+    /* Уникальный символьный интервал в шапке */
+    letter-spacing: 0.02em;
+  }
 }
 
 .nav {
   &__link {
     @extend %link;
-    /* Активная область ссылок навигации */
-    display: block;
-    padding: 32px 0;
-
-    // Цвет ссылок навигации
     color: var(--secondary-color);
+    font-weight: 500;
+    font-size: 40px;
+    line-height: calc(47 / 40);
 
-    /* Позиционирование псевдоэлементов относительно ссылок навигации */
-    position: relative;
+    @media screen and (min-width: 768px) {
+      /* Шрифт шапки */
 
-    /* Отметка текущей страницы */
-    &--current {
-      color: var(--accent-color);
-    }
-
-    /* Псевдоэлемент подчеркивания ссылок навигации */
-    &::after {
-      position: absolute;
-      left: 0;
-
-      /* Перекрытие псевдоэлементом нижней границы хедера */
-      bottom: -1px;
-
-      content: '';
+      font-size: 14px;
+      line-height: 1.14;
+      /* Активная область ссылок навигации */
       display: block;
+      padding: 32px 0;
 
-      width: 100%;
-      height: 4px;
+      // Цвет ссылок навигации
 
-      background-color: var(--accent-color);
-      border-radius: 2px;
+      /* Позиционирование псевдоэлементов относительно ссылок навигации */
+      position: relative;
+
+      /* Отметка текущей страницы */
+      &--current {
+        color: var(--accent-color);
+      }
+
+      /* Псевдоэлемент подчеркивания ссылок навигации */
+      &::after {
+        position: absolute;
+        left: 0;
+
+        /* Перекрытие псевдоэлементом нижней границы хедера */
+        bottom: -1px;
+
+        content: '';
+        display: block;
+
+        width: 100%;
+        height: 4px;
+
+        background-color: var(--accent-color);
+        border-radius: 2px;
+        @media screen and (max-width: 767px) {
+          display: none;
+        }
+      }
     }
 
     /* Эффект подчеркивания ссылок навигации, кроме текущей */
@@ -85,19 +109,48 @@
 }
 
 .contacts {
+  flex-direction: column-reverse;
+  margin-bottom: 64px;
+
+  &__item {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: calc(28 / 24);
+
+    &:last-child .contacts__link {
+      font-size: 34px;
+      line-height: calc(40 / 34);
+      color: var(--accent-color);
+
+      @media screen and (max-width: 479px) {
+        font-size: 27px;
+        line-height: 1.16;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
   &__link {
     @extend %link;
-    /* Цвет ссылок контактов */
     color: var(--main-color);
 
-    /* Выравнивание иконок контактов */
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    @media screen and (min-width: 768px) {
+      /* Выравнивание иконок контактов */
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   /* Отступ от иконки */
   &__icon {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+
     margin-right: 10px;
     /* Цвет иконки */
     fill: currentColor;

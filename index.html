@@ -25,38 +25,89 @@
     <title>WebStudio</title>
   </head>
 
-  <body data-page>
+  <body data-page data-menu>
     <!-- Шапка -->
     <header class="header">
       <div class="container header__container">
         <a class="logo header__logo" href="https://paulhighrow.github.io/goit-markup-hw-07/"
           ><span class="logo__web">Web</span>Studio</a
         >
-        <nav>
-          <ul class="nav">
-            <li><a class="nav__link nav__link--current" href="./index.html">Студия</a></li>
-            <li><a class="nav__link" href="./portfolio.html">Портфолио</a></li>
-            <li><a class="nav__link" href="">Контакты</a></li>
+        <button type="button" class="mobile-btn" data-menu-button>
+          <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+            <use class="icon-open" href="./images/icons.svg#menu-open"></use>
+            <use class="icon-close" href="./images/icons.svg#menu-close"></use>
+          </svg>
+        </button>
+
+        <div class="mobile-menu">
+          <nav>
+            <ul class="nav">
+              <li><a class="nav__link nav__link--current" href="./index.html">Студия</a></li>
+              <li><a class="nav__link" href="./portfolio.html">Портфолио</a></li>
+              <li><a class="nav__link" href="">Контакты</a></li>
+            </ul>
+          </nav>
+          <ul class="contacts">
+            <li class="contacts__item">
+              <a class="contacts__link" href="mailto:info@devstudio.com">
+                <svg class="contacts__icon" width="16" height="12">
+                  <use href="./images/icons.svg#envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link" href="tel:+380961111111">
+                <svg class="contacts__icon" width="10" height="16">
+                  <use href="./images/icons.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
+            </li>
           </ul>
-        </nav>
-        <ul class="contacts">
-          <li>
-            <a class="contacts__link" href="mailto:info@devstudio.com">
-              <svg class="contacts__icon" width="16" height="12">
-                <use href="./images/icons.svg#envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li>
-            <a class="contacts__link" href="tel:+380961111111">
-              <svg class="contacts__icon" width="10" height="16">
-                <use href="./images/icons.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+          <ul class="mobile-menu__socials">
+            <li class="mobile-menu__item">
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                class="mobile-menu__link"
+                >Instagram</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+                class="mobile-menu__link"
+                >Twitter</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                class="mobile-menu__link"
+                >Facebook</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                class="mobile-menu__link"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -72,9 +123,9 @@
       </section>
 
       <!-- Особенности -->
-      <section class="section">
+      <!-- <section class="section">
         <div class="container">
-          <!-- Скрытый заголовок -->
+           Скрытый заголовок 
           <h2 class="visually-hidden">Особенности компании</h2>
           <ul class="feature">
             <li class="feature__item">
@@ -123,10 +174,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!-- Чем мы занимаемся -->
-      <section class="section skills">
+      <!-- <section class="section skills">
         <div class="container">
           <h2 class="skills__title">Чем мы занимаемся</h2>
           <ul class="skills__list">
@@ -150,7 +201,7 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!-- Команда -->
       <section class="section team">
@@ -406,7 +457,7 @@
       </section>
 
       <!-- Постоянные клиенты -->
-      <section class="customers section">
+      <!-- <section class="customers section">
         <div class="container">
           <h2 class="customers__title">Постоянные клиенты</h2>
           <ul class="customers__list">
@@ -490,13 +541,13 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
 
     <!-- Футер -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container footer__container">
-        <!-- Адрес -->
+        Адрес
         <div class="footer__contacts">
           <a class="logo footer__logo" href="https://paulhighrow.github.io/goit-markup-hw-07/">
             <span class="logo__web">Web</span>Studio
@@ -522,7 +573,7 @@
             </ul>
           </address>
         </div>
-        <!-- Социальные сети -->
+        Социальные сети
         <div class="footer__social">
           <h3 class="footer__title">присоединяйтесь</h3>
           <ul class="social">
@@ -580,7 +631,7 @@
             </li>
           </ul>
         </div>
-        <!-- Форма подписки на рассылку -->
+        Форма подписки на рассылку
         <div class="footer__newsletter">
           <h3 class="footer__title">Подпишитесь на рассылку</h3>
           <form class="join-form" name="join-form" autocomplete="on">
@@ -602,19 +653,19 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <!-- Бэкдроп -->
-    <div class="backdrop backdrop--is-hidden" data-modal>
+    <!-- <div class="backdrop backdrop--is-hidden" data-modal>
       <div class="modal">
-        <!-- Кнопка закрытия модального окна -->
+        Кнопка закрытия модального окна
         <button class="close-btn" type="button" data-modal-close>
           <svg class="close-btn__icon">
             <use href="./images/icons.svg#close"></use>
           </svg>
         </button>
 
-        <!-- Форма модального окна -->
+        Форма модального окна
         <form class="form">
           <strong class="form__title">Оставьте свои данные, мы вам перезвоним</strong>
           <div class="form__group" role="group">
@@ -649,7 +700,7 @@
               ></textarea>
             </label>
           </div>
-          <!-- Чекбокс модального окна -->
+          Чекбокс модального окна
           <label class="checkbox">
             <input
               class="checkbox__input visually-hidden"
@@ -668,9 +719,10 @@
           <button class="modal-btn" type="submit">Отправить</button>
         </form>
       </div>
-    </div>
+    </div> -->
 
     <!-- Скрипт модального окна -->
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

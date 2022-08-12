@@ -1,12 +1,17 @@
 /* Стили логотипа студии */
 .logo {
-    font-family: var(--secondary-font-family);
-    font-weight: 700;
+  font-family: var(--secondary-font-family);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+
+  @media screen and (min-width: 1200px) {
     font-size: 26px;
     line-height: 1.19;
-    
-    /* Цвет первой части логотипа */
-    &__web {
-        color: var(--accent-color);
-    }
+  }
+
+  /* Цвет первой части логотипа */
+  &__web {
+    color: var(--accent-color);
+  }
 }
