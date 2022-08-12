@@ -1,0 +1,99 @@
+/* =============== Стили карточек =============== */
+.project {
+    @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+
+  /* Переменная количества элементов в строке секции портфолио */
+  &__card {
+    --items: 3;
+    @extend %item;
+  }
+
+  &__link {
+    /* Сброс подчеркивания для ссылок карточек */
+    text-decoration: none;
+
+    /* Изменение типа блочной модели элемента для реализации декоративных эффектов */
+    display: block;
+
+    /* Эффект перехода для ссылок карточек портфолио */
+    transition: box-shadow var(--animation-global);
+
+    /* Тень карточки при ховере и фокусе */
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    /* Перемещение оверлея в видимое состояние при ховере */
+    &:hover .project__overlay,
+    &:focus .project__overlay {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+
+  &__box {
+    /* Позиционирование оверлея относительно картинки */
+    position: relative;
+
+    /* Скрыть переполняющие элементы */
+    overflow: hidden;
+  }
+
+  /* Оверлей карточек */
+  &__overlay {
+    /* Позиционирование оверлея на всю ширтну картинки */
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* Размер и поля оверлея */
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+
+    /* Фон оверлея */
+    background-color: rgba(33, 150, 243, 0.9);
+
+    /* Смещение и прозрачность оверлея */
+    opacity: 0;
+    transform: translateY(100%);
+
+    /* Эффекты перехода оверлея */
+    transition: transform var(--animation-global), opacity var(--animation-global);
+  }
+
+  /* Стили текста оверлея */
+  &__text {
+    font-size: 18px;
+    line-height: 1.56;
+    color: var(--triary-color);
+  }
+
+  /* Стили контейнера для подписей карточек */
+  &__description {
+    padding: 20px 24px;
+    border: 1px solid var(--card-border);
+    border-top: none;
+  }
+
+  /* Стили заголовков карточек */
+  &__title {
+    color: var(--secondary-color);
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+  }
+
+  /* Стили категорий карточек */
+  &__category {
+    color: var(--main-color);
+    font-size: 16px;
+    line-height: 1.88;
+  }
+}

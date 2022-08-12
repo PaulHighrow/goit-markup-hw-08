@@ -1,0 +1,78 @@
+/* Стилизация чекбокса */
+.checkbox {
+  /* Выравнивание и центрирование элементов чексбокса */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  /* Отступ чекбокса от кнопки отправки формы */
+  margin-bottom: 30px;
+
+  /* Стиль текста чекбокса */
+  font-size: 14px;
+  line-height: 1.71;
+
+  /* Запрет выделения метки при клике на неё */
+  user-select: none;
+
+  /* Изменение курсора при наведении на элементы метки чекбокса */
+  cursor: pointer;
+
+  &__input {
+    /* Свойство для скрытия оригинального чекбокса */
+    appearance: none;
+  }
+
+  /* Кастомный чекбокс */
+  &__icon {
+    /* Размеры иконки */
+    width: 16px;
+    height: 15px;
+
+    /* Эффект перехода цвета иконки кастомного чекбокса при фокусе */
+    transition: fill var(--animation-global);
+
+    /* Скрытая иконка отмеченного чекбокса */
+    &--check {
+      opacity: 0;
+    }
+
+    /* Эффект перехода иконок при переключении чекбокса */
+    &--check,
+    &--uncheck {
+      transition: opacity var(--animation-global);
+    }
+  }
+
+  /* Имитация состояния фокуса для кастомного чекбокса */
+  &:focus-within > &__icon {
+    fill: var(--accent-color);
+  }
+
+  /* Отключение непрозрачности иконки неотмеченного чекбокса при переключении */
+  &__input:checked + &__icon &__icon--uncheck {
+    opacity: 0;
+  }
+
+  /* Включение непрозрачности иконки отмеченного чекбокса при переключении */
+  &__input:checked + &__icon &__icon--check {
+    opacity: 1;
+  }
+
+  /* Цвет и подчеркивание ссылки модального окна */
+  &__link {
+    color: var(--accent-color);
+
+    /* Смещение подчеркивания для большего сходства с макетом */
+    text-underline-offset: 1px;
+
+    /* Эффект перехода */
+    transition: color var(--animation-global);
+    /* Смена цвета ссылки модального окна при ховере и фокусе */
+    &:hover,
+    &:focus {
+      color: var(--secondary-accent-color);
+    }
+  }
+}

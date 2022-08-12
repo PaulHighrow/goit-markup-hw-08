@@ -1,0 +1,51 @@
+/* Форма подписки на рассылку */
+/* Удаление четырехпиксельного зазора между элементами формы подписки */
+.join-form {
+  display: flex;
+
+  /* Относительное позиционирование формы для размещения метки внутри поля */
+  position: relative;
+
+  /* Позиционирование метки внутри поля и эффект перехода её смещения при вводе данных */
+  &__label {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    color: var(--footer-color);
+    transition: transform var(--animation-global), color var(--animation-global);
+  }
+
+  /* Стилизация поля формы подписки */
+  &__input {
+    padding: 15px 16px;
+    margin-right: 12px;
+
+    width: 358px;
+    background-color: transparent;
+
+    color: var(--footer-color);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+
+    /* Адаптивная тень для поля формы из макета */
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
+    /* Эффект перехода цвета рамки при фокусе поля */
+    transition: border-color var(--animation-global);
+
+    /* Смена цвета рамки при фокусе поля */
+    &:focus-within {
+      border-color: var(--accent-color);
+      outline: transparent;
+    }
+  }
+
+  /* Смещение и смена цвета метки при исчезновении плейсхолдера */
+  &__input:not(:placeholder-shown) + &__label {
+    transform: translateY(-33px) scale(0.9);
+    color: var(--accent-color);
+    background-color: var(--bg-color);
+  }
+}

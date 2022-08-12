@@ -1,0 +1,32 @@
+/* =============== Герой =============== */
+
+.hero {
+  background-color: var(--bg-color);
+  color: var(--triary-color);
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  /* Фоновое изображение героя, затемненное градиентом */
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/bg-img.jpg');
+
+  /* Ограничение размеров изображения */
+  max-width: 1600px;
+  margin: 0 auto;
+  /* Подгон размеров блока героя до значений макета */
+  padding: 200px 0;
+
+  /* Заголовок героя */
+  &__title {
+    /* Ширина и центрирование элемента */
+    width: 696px;
+    margin: auto;
+    margin-bottom: 30px;
+
+    /* Стили шрифта, которые заголовок не может унаследовать */
+    font-weight: 900;
+    font-size: 44px;
+  }
+}

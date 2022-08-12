@@ -1,0 +1,56 @@
+/* =============== Постоянные клиенты =============== */
+/* Расположение элементов по горизонтали и отступы */
+.customers {
+  &__title {
+    @extend %title;
+  }
+
+  &__list {
+    @extend %list;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--indent);
+  }
+
+  /* Стиль элементов списка клиентов */
+  &__item {
+    /* Переменная количества элементов в строке секции команды */
+    --items: 6;
+
+    @extend %item;
+  }
+
+  /* Размеры иконки */
+  &__icon {
+    width: 106px;
+    height: 60px;
+  }
+
+  /* Стиль иконок-ссылок в секции постоянных клиентов */
+  &__link {
+    /* Рамка элемента */
+    border: 1px solid var(--customer-color);
+    border-radius: 4px;
+
+    /* Цвет иконки */
+    fill: var(--customer-color);
+
+    /* Высота элемента */
+    height: 92px;
+
+    /* Выравнивание иконки по центру элемента */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Эффекты перехода для списка постоянных клиентов */
+    transition: fill var(--animation-global), border-color var(--animation-global);
+
+    /* Эффект ховера для элементов списка постоянных клиентов */
+    &:hover,
+    &:focus {
+      border: 1px solid var(--accent-color);
+      fill: var(--accent-color);
+    }
+  }
+}

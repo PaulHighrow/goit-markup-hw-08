@@ -1,0 +1,44 @@
+/* Расположение ссылок на социальные сети в секции сотрудников и в футере*/
+.social {
+  @extend %list;
+  
+  /* Общий флекс для элементов списка и каждой ссылки по отдельности */
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  /* Размеры иконок соцсетей */
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Оформление ссылок соцсетей сотрудников */
+  &__link {
+    
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: var(--customer-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Эффект перехода для ссылок соцсетей */
+    transition: fill var(--animation-global), background-color var(--animation-global);
+
+    /* Оформление ссылок соцсетей футера */
+    &--footer {
+      fill: var(--triary-color);
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Эффекты для ссылок соцсетей сотрудников */
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+      fill: var(--triary-color);
+    }
+  }
+}

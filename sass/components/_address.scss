@@ -1,0 +1,25 @@
+.address {
+  /* Сброс курсива элемента address */
+  font-style: normal;
+  @extend %list;
+
+  /* Отступы между элементами списка, кроме последнего */
+  &__item:not(:last-child) {
+    display: block;
+    margin-bottom: 9px;
+  }
+
+  /* Стили элемента address, уникальный цвет с макета */
+  &__link {
+    @extend %link;
+    color: var(--footer-color);
+
+    font-size: 14px;
+    line-height: 1.71;
+
+    /* Цвет адреса */
+    &--map {
+      color: var(--triary-color);
+    }
+  }
+}

@@ -1,0 +1,39 @@
+/* Кнопка закрытия модального окна */
+.close-btn {
+  /* Позиционирование кнопки */
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  /* Выравнивание иконки */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Размеры кнопки */
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+
+  /* Рамка кнопки */
+  background-color: var(--triary-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  /* Эффект перехода цвета иконки */
+  transition: fill var(--animation-global);
+
+  cursor: pointer;
+
+  /* Размер иконки кнопки закрытия модальной формы */
+  &__icon {
+    min-width: 18px;
+    height: 18px;
+  }
+
+  /* Эффекты при ховере и фокусе на кнопку */
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}

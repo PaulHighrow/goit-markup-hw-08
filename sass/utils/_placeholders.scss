@@ -1,0 +1,66 @@
+/* Сброс маркеров списков */
+%list {
+    list-style: none;
+}
+
+/* Общая формула для масштабирования ширины элементов сеток */
+%item {
+    flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+
+// Общая стилизация ссылок
+%link {
+    /* Сброс подчеркивания для ссылок */
+    text-decoration: none;
+
+    /* Эффект перехода для ссылок */
+    transition: color var(--animation-global);
+
+    /* Эффекты hover и focus для всех ссылок, кроме логотипа */
+        &:hover:not(.logo),
+        &:focus:not(.logo) {
+            color: var(--accent-color);
+        }
+}
+
+// Общая стилизация кнопок
+%btn {
+    /* Размеры, рамка и отступы */
+    padding: 10px 32px;
+    border-radius: 4px;
+    border: none;
+
+    /* Шрифт кнопок */
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: inherit;
+
+    /* Цвета и тень кнопки */
+    color: var(--triary-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    /* Эффект курсора */
+    cursor: pointer;
+
+    /* Эффект перехода */
+    transition: background-color var(--animation-global);
+
+    /* Эффекты кнопок */
+    &:hover,
+    &:focus {
+        background-color: var(--secondary-accent-color);
+    }
+}
+
+/* Стиль заголовков списков скиллов, команды и постоянных клиентов */
+%title {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+
+    color: var(--secondary-color);
+}

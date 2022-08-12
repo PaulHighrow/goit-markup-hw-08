@@ -1,0 +1,29 @@
+/* Бэкдроп */
+.backdrop {
+  /* Позиционирование бэкдропа  */
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  /* Размеры бэкдропа относительно вьюпорта */
+  width: 100vw;
+  height: 100vh;
+
+  /* Полупрозрачный фон бэкдропа */
+  background-color: rgba(0, 0, 0, 0.2);
+
+  /* Эффект перехода при открытии и закрытии модального окна */
+  transition: visibility var(--animation-global), opacity var(--animation-global);
+
+  /* Скрытый бэкдроп */
+  &--is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+    /* Эффект "лопнувшей формы", центрирование при закрытии модального окна */
+    & .modal {
+      transform: translate(-50%, -50%) scale(1.05);
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import './utils/vars';
+@import './utils/placeholders';
+@import './utils/visually-hidden';
+@import './utils/no-scroll';
+
+@import './base/reset';
+@import './base/inherit';
+
+@import './components/section';
+@import './components/container';
+@import './components/btns';
+@import './components/socials';
+@import './components/address';
+@import './components/join-form';
+@import './components/backdrop';
+@import './components/modal';
+@import './components/close-btn';
+@import './components/checkbox';
+
+@import './layout/header';
+@import './layout/logo';
+@import './layout/hero';
+@import './layout/feature';
+@import './layout/skills';
+@import './layout/team';
+@import './layout/customers';
+@import './layout/footer';
+@import './layout/filter';
+@import './layout/project';
+@import './layout/form';

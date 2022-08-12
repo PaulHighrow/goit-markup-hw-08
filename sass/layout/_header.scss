@@ -1,0 +1,105 @@
+/* =============== Стили шапки =============== */
+.header {
+  border-bottom: 1px solid var(--header-border);
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    @extend %link;
+    /* Цвет и отступ логотипа в шапке  */
+    margin-right: 93px;
+    color: var(--logo-color);
+  }
+}
+
+/* Списки шапки */
+.nav,
+.contacts {
+  @extend %list;
+
+  /* Расположение элементов шапки */
+  display: flex;
+  margin-left: auto;
+  gap: 50px;
+
+  /* Шрифт шапки */
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+
+  /* Уникальный символьный интервал в шапке */
+  letter-spacing: 0.02em;
+}
+
+.nav {
+  &__link {
+    @extend %link;
+    /* Активная область ссылок навигации */
+    display: block;
+    padding: 32px 0;
+
+    // Цвет ссылок навигации
+    color: var(--secondary-color);
+
+    /* Позиционирование псевдоэлементов относительно ссылок навигации */
+    position: relative;
+
+    /* Отметка текущей страницы */
+    &--current {
+      color: var(--accent-color);
+    }
+
+    /* Псевдоэлемент подчеркивания ссылок навигации */
+    &::after {
+      position: absolute;
+      left: 0;
+
+      /* Перекрытие псевдоэлементом нижней границы хедера */
+      bottom: -1px;
+
+      content: '';
+      display: block;
+
+      width: 100%;
+      height: 4px;
+
+      background-color: var(--accent-color);
+      border-radius: 2px;
+    }
+
+    /* Эффект подчеркивания ссылок навигации, кроме текущей */
+    &:not(&--current)::after {
+      transform: scaleX(0);
+      transition: transform var(--animation-global);
+    }
+
+    /* Масштабирование эффекта подчеркивания */
+    &:hover::after,
+    &:focus::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.contacts {
+  &__link {
+    @extend %link;
+    /* Цвет ссылок контактов */
+    color: var(--main-color);
+
+    /* Выравнивание иконок контактов */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Отступ от иконки */
+  &__icon {
+    margin-right: 10px;
+    /* Цвет иконки */
+    fill: currentColor;
+  }
+}

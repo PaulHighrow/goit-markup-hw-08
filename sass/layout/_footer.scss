@@ -1,0 +1,44 @@
+/* =============== Футер =============== */
+/* Цвет и отступы фона */
+.footer {
+  background-color: var(--bg-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  /* Расположение и выравнивание контейнеров в футере */
+  &__container {
+    display: flex;
+    align-items: baseline;
+  }
+
+  /* Отступ от контейнера контактной информации */
+  &__contacts {
+    @extend %link;
+    margin-right: 70px;
+  }
+
+  /* Цвет и отступ логотипа в футере */
+  &__logo {
+    @extend %link;
+    display: block;
+    margin-bottom: 20px;
+
+    color: var(--triary-color);
+  }
+
+  /* Отступ контейнера формы от других блоков футера */
+  &__newsletter {
+    margin-left: auto;
+  }
+
+  /* Стиль заголовка списка соцсетей в футере */
+  &__title {
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+
+    color: var(--triary-color);
+  }
+}

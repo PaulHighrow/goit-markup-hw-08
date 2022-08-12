@@ -1,0 +1,43 @@
+/* Кнопка-герой */
+.order-btn {
+  @extend %btn;
+}
+
+/* Кнопка формы подписки в футере */
+.join-btn {
+  @extend %btn;
+
+  /* Выравнивание элементов кнопки */
+  display: inline-flex;
+  align-items: center;
+
+  /* Зазор между элементами кнопки */
+  gap: 10px;
+
+  /* Поля кнопки */
+  padding: 10px 28px;
+
+  /* Межсимвольный интервал */
+  letter-spacing: 0.06em;
+
+  /* Размеры иконки кнопки */
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Кнопка отправки модальной формы */
+.modal-btn {
+  @extend %btn;
+
+  /* Расположение кнопки по центру формы */
+  display: block;
+  margin: 0 auto;
+
+  /* Поля кнопки */
+  padding: 10px 55px;
+
+  /* Межсимвольный интервал */
+  letter-spacing: 0.06em;
+}
