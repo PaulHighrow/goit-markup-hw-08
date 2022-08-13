@@ -4,6 +4,7 @@
 .filter {
   @extend %list;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: var(--filter-indent);
   margin-bottom: 50px;

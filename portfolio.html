@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Homework 7" />
+    <meta name="description" content="Homework 8" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,40 +25,89 @@
     <title>WebStudio Portfolio</title>
   </head>
 
-  <body>
+  <body data-menu>
     <!-- Шапка -->
     <header class="header">
       <div class="container header__container">
-        <a class="logo header__logo" href="https://paulhighrow.github.io/goit-markup-hw-07/"
+        <a class="logo header__logo" href="https://paulhighrow.github.io/goit-markup-hw-08/"
           ><span class="logo__web">Web</span>Studio</a
         >
-        <nav>
-          <ul class="nav">
-            <li><a class="nav__link" href="./index.html">Студия</a></li>
-            <li>
-              <a class="nav__link nav__link--current" href="./portfolio.html">Портфолио</a>
+        <button type="button" class="mobile-btn" data-menu-button>
+          <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+            <use class="icon-open" href="./images/icons.svg#menu-open"></use>
+            <use class="icon-close" href="./images/icons.svg#menu-close"></use>
+          </svg>
+        </button>
+
+        <div class="mobile-menu">
+          <nav class="header__nav">
+            <ul class="nav">
+              <li><a class="nav__link" href="./index.html">Студия</a></li>
+              <li><a class="nav__link nav__link--current" href="./portfolio.html">Портфолио</a></li>
+              <li><a class="nav__link" href="">Контакты</a></li>
+            </ul>
+          </nav>
+          <ul class="contacts">
+            <li class="contacts__item">
+              <a class="contacts__link" href="mailto:info@devstudio.com">
+                <svg class="contacts__icon" width="16" height="12">
+                  <use href="./images/icons.svg#envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
             </li>
-            <li><a class="nav__link" href="">Контакты</a></li>
+            <li class="contacts__item">
+              <a class="contacts__link" href="tel:+380961111111">
+                <svg class="contacts__icon" width="10" height="16">
+                  <use href="./images/icons.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
+            </li>
           </ul>
-        </nav>
-        <ul class="contacts">
-          <li>
-            <a class="contacts__link" href="mailto:info@devstudio.com">
-              <svg class="contacts__icon" width="16" height="12">
-                <use href="./images/icons.svg#envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li>
-            <a class="contacts__link" href="tel:+380961111111">
-              <svg class="contacts__icon" width="10" height="16">
-                <use href="./images/icons.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+          <ul class="mobile-menu__socials">
+            <li class="mobile-menu__item">
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                class="mobile-menu__link"
+                >Instagram</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+                class="mobile-menu__link"
+                >Twitter</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                class="mobile-menu__link"
+                >Facebook</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                class="mobile-menu__link"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -88,7 +137,7 @@
             </li>
           </ul>
           <!-- Проекты -->
-          <ul class="project">
+          <!-- <ul class="project">
             <li class="project__card">
               <a class="project__link" href="">
                 <div class="project__box">
@@ -259,16 +308,16 @@
                 </div>
               </a>
             </li>
-          </ul>
+          </ul> -->
         </div>
       </section>
     </main>
     <!-- Футер -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container footer__container">
-        <!-- Адрес -->
+        Адрес
         <div class="footer__contacts">
-          <a class="logo footer__logo" href="https://paulhighrow.github.io/goit-markup-hw-07/">
+          <a class="logo footer__logo" href="https://paulhighrow.github.io/goit-markup-hw-08/">
             <span class="logo__web">Web</span>Studio
           </a>
           <address>
@@ -292,7 +341,7 @@
             </ul>
           </address>
         </div>
-        <!-- Социальные сети -->
+        Социальные сети
         <div class="footer__social">
           <h3 class="footer__title">присоединяйтесь</h3>
           <ul class="social">
@@ -350,7 +399,7 @@
             </li>
           </ul>
         </div>
-        <!-- Форма подписки на рассылку -->
+        Форма подписки на рассылку
         <div class="footer__newsletter">
           <h3 class="footer__title">Подпишитесь на рассылку</h3>
           <form class="join-form" name="join-form" autocomplete="on">
@@ -372,8 +421,9 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
     <!-- Скрипт текущей кнопки -->
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/activebtn.js"></script>
   </body>
 </html>

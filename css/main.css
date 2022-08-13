@@ -100,7 +100,7 @@
 
 /*
   |==============================
-  | Запрет скролла при вызове модальной формы
+  | Запрет скролла при вызове модальной формы и мобильного меню
   |==============================
 */
 .no-scroll {
@@ -524,6 +524,11 @@ body {
     margin-right: 93px;
   }
 }
+@media screen and (max-width: 767px) {
+  .header__nav {
+    margin-bottom: auto;
+  }
+}
 
 /* Списки шапки */
 .nav,
@@ -557,8 +562,12 @@ body {
   font-weight: 500;
   font-size: 40px;
   line-height: 1.175;
+  /* Отметка текущей страницы */
   /* Эффект подчеркивания ссылок навигации, кроме текущей */
   /* Масштабирование эффекта подчеркивания */
+}
+.nav__link--current {
+  color: var(--accent-color);
 }
 @media screen and (min-width: 768px) {
   .nav__link {
@@ -570,11 +579,7 @@ body {
     padding: 32px 0;
     /* Позиционирование псевдоэлементов относительно ссылок навигации */
     position: relative;
-    /* Отметка текущей страницы */
     /* Псевдоэлемент подчеркивания ссылок навигации */
-  }
-  .nav__link--current {
-    color: var(--accent-color);
   }
   .nav__link::after {
     position: absolute;
@@ -613,6 +618,7 @@ body {
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
   margin-bottom: 64px;
+  margin-top: 64px;
   /* Отступ от иконки */
 }
 .contacts__item {
@@ -953,6 +959,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1178,7 +1186,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow-y: scroll;
 }
 @media screen and (max-width: 767px) {
   .mobile-menu {
@@ -1186,7 +1193,7 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
@@ -1194,6 +1201,7 @@ body {
     background-color: var(--triary-color);
     width: 100%;
     height: 100vh;
+    overflow-y: scroll;
   }
 }
 .mobile-menu__socials {
@@ -1225,7 +1233,6 @@ body {
 }
 
 .mobile-btn {
-  margin-left: auto;
   border: none;
   background-color: var(--triary-color);
   border-radius: 50%;
@@ -1251,14 +1258,20 @@ body {
   display: none;
 }
 
-.mobile-btn.is-open + .mobile-menu {
-  display: block;
-}
-
 .mobile-btn.is-open .icon-close {
   display: block;
 }
 
 .mobile-btn.is-open .icon-open {
   display: none;
+}
+
+.mobile-btn.is-open + .mobile-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }/*# sourceMappingURL=main.css.map */

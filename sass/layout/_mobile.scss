@@ -1,18 +1,21 @@
 .mobile-menu {
   display: flex;
-  overflow-y: scroll;
 
   @media screen and (max-width: 767px) {
     display: none;
     justify-content: space-between;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
+
     padding: 48px 40px;
     background-color: var(--triary-color);
     width: 100%;
     height: 100vh;
+
+    // Скролл внутри мобильного меню
+    overflow-y: scroll;
   }
 
   &__socials {
@@ -47,7 +50,6 @@
 }
 
 .mobile-btn {
-  margin-left: auto;
   border: none;
   background-color: var(--triary-color);
   border-radius: 50%;
@@ -76,14 +78,15 @@
   display: none;
 }
 
-.mobile-btn.is-open + .mobile-menu {
-  display: block;
-}
-
 .mobile-btn.is-open .icon-close {
   display: block;
 }
 
 .mobile-btn.is-open .icon-open {
   display: none;
+}
+
+.mobile-btn.is-open + .mobile-menu {
+  display: flex;
+  flex-direction: column;
 }
