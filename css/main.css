@@ -110,6 +110,13 @@
   padding-right: 16px;
 }
 
+@media screen and (min-width: 768px) {
+  .is-open {
+    overflow-y: scroll;
+    padding-right: 0px;
+  }
+}
+
 /* Сброс встроенной геометрии для заголовков, абзацев и списков */
 h1,
 h2,
