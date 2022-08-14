@@ -1,26 +1,32 @@
 /* Модальное окно */
 .modal {
-    /* Позиционирование модального окна в бэкдропе */
-    position: absolute;
-    top: 50%;
-    left: 50%;
+  /* Позиционирование модального окна в бэкдропе */
+  position: absolute;
+  top: 50%;
+  left: 50%;
 
-    /* Центрирование модального окна */
-    transform: translate(-50%, -50%);
+  /* Центрирование модального окна */
+  transform: translate(-50%, -50%);
 
-    /* Приблизительные размеры модального окна */
+  /* Приблизительные размеры модального окна */
+  width: 450px;
+  /* Поля модального окна */
+  padding: 40px;
+
+  /* Оформление модального окна */
+  background: var(--triary-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  /* Эффект появления модальной формы */
+  transition: transform var(--animation-global), opacity var(--animation-global);
+
+  @media screen and (max-width: 450px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 1200px) {
     min-width: 530px;
-    min-height: 580px;
-
-    /* Поля модального окна */
-    padding: 40px;
-
-    /* Оформление модального окна */
-    background: var(--triary-color);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-
-    /* Эффект появления модальной формы */
-    transition: transform var(--animation-global), opacity var(--animation-global);
+  }
 }

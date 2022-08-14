@@ -2,23 +2,40 @@
 /* Смена типа отображения списка особенностей */
 .feature {
   @extend %list;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--indent);
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--indent);
+  }
 
   /* Переменная количества элементов в строке секции особенностей */
   &__item {
-    --items: 4;
     @extend %item;
-  }
 
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      --items: 2;
+    }
+
+    @media screen and (min-width: 1200px) {
+      --items: 4;
+    }
+  }
   /* Фон иконки и отступ от него */
   &__icon-box {
     margin-bottom: 30px;
     width: 100%;
     height: 120px;
 
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 
@@ -35,6 +52,10 @@
     text-transform: uppercase;
 
     color: var(--secondary-color);
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
   }
 
   /* Стиль текста списка */

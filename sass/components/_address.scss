@@ -6,7 +6,11 @@
   /* Отступы между элементами списка, кроме последнего */
   &__item:not(:last-child) {
     display: block;
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 9px;
+    }
   }
 
   /* Стили элемента address, уникальный цвет с макета */

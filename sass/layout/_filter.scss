@@ -5,9 +5,18 @@
   @extend %list;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--filter-indent);
-  margin-bottom: 50px;
+  gap: var(--filter-indent-y) var(--filter-indent);
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    gap: var(--filter-indent);
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 
   /* Стили кнопок фильтра */
   &__btn {

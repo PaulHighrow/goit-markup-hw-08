@@ -1,6 +1,11 @@
 /* Выравнивание отступа от границы секции для обеспечения правильного расстояния между контейнерами */
 .skills {
   padding-top: 0;
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
 
   &__title {
     @extend %title;

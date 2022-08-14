@@ -16,3 +16,14 @@ img,
 svg {
   display: block;
 }
+
+img {
+  // Обеспечение респонсивности изображений
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  // Запрет изменения размера иконками
+  flex-shrink: 0;
+}

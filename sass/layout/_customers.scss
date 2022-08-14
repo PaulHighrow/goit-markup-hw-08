@@ -7,6 +7,7 @@
 
   &__list {
     @extend %list;
+
     display: flex;
     flex-wrap: wrap;
     gap: var(--indent);
@@ -14,10 +15,18 @@
 
   /* Стиль элементов списка клиентов */
   &__item {
-    /* Переменная количества элементов в строке секции команды */
-    --items: 6;
-
     @extend %item;
+
+    @media screen and (max-width: 767px) {
+      --items: 2;
+    }
+    /* Переменная количества элементов в строке секции команды */
+    @media screen and (min-width: 768px) {
+      --items: 3;
+    }
+    @media screen and (min-width: 1200px) {
+      --items: 6;
+    }
   }
 
   /* Размеры иконки */

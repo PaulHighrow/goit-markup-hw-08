@@ -6,22 +6,31 @@
   /* Относительное позиционирование формы для размещения метки внутри поля */
   position: relative;
 
+  @media screen and (max-width: 1199px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
   /* Позиционирование метки внутри поля и эффект перехода её смещения при вводе данных */
   &__label {
     position: absolute;
-    top: 50%;
+    top: 25px;
     left: 16px;
     transform: translateY(-50%);
     color: var(--footer-color);
     transition: transform var(--animation-global), color var(--animation-global);
+
+    @media screen and (min-width: 1200px) {
+      top: 50%;
+    }
   }
 
   /* Стилизация поля формы подписки */
   &__input {
     padding: 15px 16px;
-    margin-right: 12px;
+    width: 100%;
 
-    width: 358px;
     background-color: transparent;
 
     color: var(--footer-color);
@@ -39,6 +48,15 @@
     &:focus-within {
       border-color: var(--accent-color);
       outline: transparent;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 450px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 12px;
+      width: 358px;
     }
   }
 

@@ -123,9 +123,9 @@
       </section>
 
       <!-- Особенности -->
-      <!-- <section class="section">
+      <section class="section">
         <div class="container">
-           Скрытый заголовок 
+          <!-- Скрытый заголовок  -->
           <h2 class="visually-hidden">Особенности компании</h2>
           <ul class="feature">
             <li class="feature__item">
@@ -174,34 +174,49 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- Чем мы занимаемся -->
-      <!-- <section class="section skills">
+      <section class="section skills">
         <div class="container">
           <h2 class="skills__title">Чем мы занимаемся</h2>
           <ul class="skills__list">
             <li class="skills__item">
-              <img src="./images/img1.jpg" alt="Десктопные приложения" width="370" />
+              <img
+                srcset="images\skills-img\img1@1x.jpg 1x, images\skills-img\img1@2x.jpg 2x"
+                src="./images/skills-img/img1@1x.jpg"
+                alt="Десктопные приложения"
+                width="370"
+              />
               <div class="skills__overlay">
                 <h3 class="skills__text">Десктопные приложения</h3>
               </div>
             </li>
             <li class="skills__item">
-              <img src="./images/img2.jpg" alt="Мобильные приложения" width="370" />
+              <img
+                srcset="images\skills-img\img2@1x.jpg 1x, images\skills-img\img2@2x.jpg 2x"
+                src="./images/skills-img/img2@1x.jpg"
+                alt="Мобильные приложения"
+                width="370"
+              />
               <div class="skills__overlay">
                 <h3 class="skills__text">Мобильные приложения</h3>
               </div>
             </li>
             <li class="skills__item">
-              <img src="./images/img3.jpg" alt="Дизайнерские решения" width="370" />
+              <img
+                srcset="images\skills-img\img3@1x.jpg 1x, images\skills-img\img3@2x.jpg 2x"
+                src="./images/skills-img/img3@1x.jpg"
+                alt="Дизайнерские решения"
+                width="370"
+              />
               <div class="skills__overlay">
                 <h3 class="skills__text">Дизайнерские решения</h3>
               </div>
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- Команда -->
       <section class="section team">
@@ -209,7 +224,30 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__card">
-              <img src="./images/imgteam1.jpg" alt="Игорь Демьяненко" width="270" />
+              <picture>
+                <source
+                  srcset="
+                    images/team-img/team-img1@1x-270.jpg 1x,
+                    images/team-img/team-img1@2x-540.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    images/team-img/team-img1@1x-354.jpg 1x,
+                    images/team-img/team-img1@2x-708.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    images/team-img/team-img1@1x-450.jpg 1x,
+                    images/team-img/team-img1@2x-900.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img src="./images/team-img/team-img1@2x-900.jpg" alt="Игорь Демьяненко" />
+              </picture>
               <div class="team__description">
                 <h3 class="team__name">Игорь Демьяненко</h3>
                 <p class="team__job">Product Designer</p>
@@ -270,7 +308,30 @@
               </div>
             </li>
             <li class="team__card">
-              <img src="./images/imgteam2.jpg" alt="Ольга Репина" width="270" />
+              <picture>
+                <source
+                  srcset="
+                    images/team-img/team-img2@1x-270.jpg 1x,
+                    images/team-img/team-img2@2x-540.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    images/team-img/team-img2@1x-354.jpg 1x,
+                    images/team-img/team-img2@2x-708.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    images/team-img/team-img2@1x-450.jpg 1x,
+                    images/team-img/team-img2@2x-900.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img src="./images/team-img/team-img2@2x-900.jpg" alt="Ольга Репина" />
+              </picture>
               <div class="team__description">
                 <h3 class="team__name">Ольга Репина</h3>
                 <p class="team__job">Frontend Developer</p>
@@ -331,7 +392,30 @@
               </div>
             </li>
             <li class="team__card">
-              <img src="./images/imgteam3.jpg" alt="Николай Тарасов" width="270" />
+              <picture>
+                <source
+                  srcset="
+                    images/team-img/team-img3@1x-270.jpg 1x,
+                    images/team-img/team-img3@2x-540.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    images/team-img/team-img3@1x-354.jpg 1x,
+                    images/team-img/team-img3@2x-708.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    images/team-img/team-img3@1x-450.jpg 1x,
+                    images/team-img/team-img3@2x-900.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img src="./images/team-img/team-img3@2x-900" alt="Николай Тарасов" />
+              </picture>
               <div class="team__description">
                 <h3 class="team__name">Николай Тарасов</h3>
                 <p class="team__job">Marketing</p>
@@ -392,7 +476,30 @@
               </div>
             </li>
             <li class="team__card">
-              <img src="./images/imgteam4.jpg" alt="Михаил Ермаков" width="270" />
+              <picture>
+                <source
+                  srcset="
+                    images/team-img/team-img4@1x-270.jpg 1x,
+                    images/team-img/team-img4@2x-540.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    images/team-img/team-img4@1x-354.jpg 1x,
+                    images/team-img/team-img4@2x-708.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    images/team-img/team-img4@1x-450.jpg 1x,
+                    images/team-img/team-img4@2x-900.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img src="./images/team-img/team-img4@2x-900" alt="Михаил Ермаков" />
+              </picture>
               <div class="team__description">
                 <h3 class="team__name">Михаил Ермаков</h3>
                 <p class="team__job">UI Designer</p>
@@ -457,7 +564,7 @@
       </section>
 
       <!-- Постоянные клиенты -->
-      <!-- <section class="customers section">
+      <section class="customers section">
         <div class="container">
           <h2 class="customers__title">Постоянные клиенты</h2>
           <ul class="customers__list">
@@ -541,13 +648,13 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
 
     <!-- Футер -->
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer__container">
-        Адрес
+        <!-- Адрес -->
         <div class="footer__contacts">
           <a class="logo footer__logo" href="https://paulhighrow.github.io/goit-markup-hw-08/">
             <span class="logo__web">Web</span>Studio
@@ -573,7 +680,7 @@
             </ul>
           </address>
         </div>
-        Социальные сети
+        <!-- Социальные сети -->
         <div class="footer__social">
           <h3 class="footer__title">присоединяйтесь</h3>
           <ul class="social">
@@ -631,7 +738,7 @@
             </li>
           </ul>
         </div>
-        Форма подписки на рассылку
+        <!-- Форма подписки на рассылку -->
         <div class="footer__newsletter">
           <h3 class="footer__title">Подпишитесь на рассылку</h3>
           <form class="join-form" name="join-form" autocomplete="on">
@@ -653,19 +760,19 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
     <!-- Бэкдроп -->
-    <!-- <div class="backdrop backdrop--is-hidden" data-modal>
+    <div class="backdrop backdrop--is-hidden" data-modal>
       <div class="modal">
-        Кнопка закрытия модального окна
+        <!-- Кнопка закрытия модального окна -->
         <button class="close-btn" type="button" data-modal-close>
           <svg class="close-btn__icon">
             <use href="./images/icons.svg#close"></use>
           </svg>
         </button>
 
-        Форма модального окна
+        <!-- Форма модального окна -->
         <form class="form">
           <strong class="form__title">Оставьте свои данные, мы вам перезвоним</strong>
           <div class="form__group" role="group">
@@ -700,13 +807,9 @@
               ></textarea>
             </label>
           </div>
-          Чекбокс модального окна
+          <!-- Чекбокс модального окна -->
           <label class="checkbox">
-            <input
-              class="checkbox__input visually-hidden"
-              type="checkbox"
-              name="agreement-checkbox"
-            />
+            <input class="checkbox__input" type="checkbox" name="agreement-checkbox" />
             <svg class="checkbox__icon">
               <use class="checkbox__icon--uncheck" href="./images/icons.svg#un-checkbox"></use>
               <use class="checkbox__icon--check" href="./images/icons.svg#checkbox"></use>
@@ -719,7 +822,7 @@
           <button class="modal-btn" type="submit">Отправить</button>
         </form>
       </div>
-    </div> -->
+    </div>
 
     <!-- Скрипт модального окна -->
     <script src="./js/mobile-menu.js"></script>

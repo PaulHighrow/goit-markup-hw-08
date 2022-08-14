@@ -8,21 +8,56 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
-  /* Фоновое изображение героя, затемненное градиентом */
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../images/bg-img.jpg');
-  // background-position: center, center;
-  // background-size: cover;
-
-  /* Ограничение размеров изображения */
-  max-width: 1600px;
-  margin: 0 auto;
-  /* Подгон размеров блока героя до значений макета */
+  /* Поля секции */
   padding: 118px 0;
+
   @media screen and (min-width: 1200px) {
     line-height: 1.36;
     padding: 200px 0;
   }
+
+  /* Фоновое изображение героя, затемненное градиентом */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  // Мобильный экран
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/bg-img/bg-img@1x-480.jpg');
+  // Мобильный retina-экран
+  @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/bg-img/bg-img@2x-480.jpg');
+  }
+
+  // Планшетный экран
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/bg-img/bg-img@1x-768.jpg');
+    // Планшетный retina-экран
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/bg-img/bg-img@2x-768.jpg');
+    }
+  }
+  // Компьютерный экран
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/bg-img/bg-img@1x-1200.jpg');
+    // Компьютерный retina-экран
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/bg-img/bg-img@2x-1200.jpg');
+    }
+  }
+
+  /* Ограничение размеров изображения */
+  max-width: 1600px;
+  margin: 0 auto;
 
   /* Заголовок героя */
   &__title {

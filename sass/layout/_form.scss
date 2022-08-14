@@ -6,10 +6,15 @@
     margin-bottom: 12px;
 
     font-size: 20px;
+    line-height: 1.5;
 
     text-align: center;
 
     color: var(--secondary-color);
+
+    @media screen and (min-width: 1200px) {
+      line-height: 1.15;
+    }
   }
 
   /* Отступ группы элементов формы от чекбокса */

@@ -5,18 +5,33 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+
   /* Расположение и выравнивание контейнеров в футере */
   &__container {
+    display: flex;
+    gap: 60px;
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+
     @media screen and (min-width: 768px) {
-      display: flex;
+      justify-content: space-evenly;
       align-items: baseline;
+      flex-wrap: wrap;
     }
   }
 
   /* Отступ от контейнера контактной информации */
   &__contacts {
     @extend %link;
-    margin-right: 70px;
+
+    @media screen and (min-width: 768px) {
+      // margin-right: auto;
+    }
   }
 
   /* Цвет и отступ логотипа в футере */
@@ -30,7 +45,13 @@
 
   /* Отступ контейнера формы от других блоков футера */
   &__newsletter {
-    margin-left: auto;
+    @media screen and (max-width: 1199px) {
+      max-width: 450px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-left: auto;
+    }
   }
 
   /* Стиль заголовка списка соцсетей в футере */

@@ -6,12 +6,16 @@
   &__title {
     @extend %title;
   }
+
   /* Расположение элементов по горизонтали и отступы */
   &__list {
     @extend %list;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--indent);
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--indent);
+    }
   }
 
   /* Фон и закругленные нижние рамки карточек сотрудников */
@@ -22,8 +26,20 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
 
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+
     /* Переменная количества элементов в строке секции команды */
-    --items: 4;
+    @media screen and (min-width: 768px) {
+      --items: 2;
+    }
+    @media screen and (min-width: 1200px) {
+      --items: 4;
+    }
   }
 
   /* Имена сотрудников */
