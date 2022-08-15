@@ -24,6 +24,14 @@
     flex-wrap: wrap;
     gap: 10px;
 
+    @media screen and (max-width: 400px) {
+      gap: 7px;
+    }
+
+    @media screen and (max-width: 350px) {
+      gap: 5px;
+    }
+
     @media screen and (min-width: 768px) {
       display: none;
     }
@@ -32,6 +40,14 @@
   &__item {
     @extend %item;
     padding-right: 10px;
+
+    @media screen and (max-width: 400px) {
+      padding-right: 7px;
+    }
+
+    @media screen and (max-width: 350px) {
+      padding-right: 5px;
+    }
     border-right: 1px solid var(--form-border);
 
     &:last-child {
@@ -44,8 +60,31 @@
     @extend %link;
     font-weight: 500;
     font-size: 18px;
-    line-height: 22px;
+    line-height: calc(22 / 18);
     color: var(--accent-color);
+
+    @media screen and (max-width: 425px) {
+      font-size: 15px;
+    }
+
+    @media screen and (max-width: 400px) {
+      font-size: 13px;
+    }
+
+    @media screen and (max-width: 350px) {
+      font-size: 12px;
+    }
+  }
+}
+
+.menu-wrap {
+  position: absolute;
+  top: 10px;
+  right: 55px;
+
+  @media screen and (min-width: 768px) {
+    position: static;
+    width: 100%;
   }
 }
 
@@ -58,8 +97,7 @@
   margin: 0px;
 
   position: fixed;
-  top: 10px;
-  right: 15px;
+
   z-index: 3;
 
   transition: fill var(--animation-global);

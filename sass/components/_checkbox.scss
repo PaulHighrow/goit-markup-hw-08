@@ -6,12 +6,16 @@
   justify-content: center;
 
   /* Отступ чекбокса от кнопки отправки формы */
-  margin-bottom: 31px;
+  margin-bottom: 20px;
 
   /* Стиль текста чекбокса */
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.03em;
+
+  @media screen and (min-width: 480px) {
+    margin-bottom: 31px;
+  }
 
   @media screen and (min-width: 1200px) {
     margin-bottom: 30px;

@@ -444,6 +444,7 @@ body {
 @media screen and (max-width: 450px) {
   .modal {
     width: 100%;
+    padding: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -484,7 +485,7 @@ body {
   /* Эффекты при ховере и фокусе на кнопку */
 }
 .close-btn__icon {
-  min-width: 18px;
+  width: 18px;
   height: 18px;
 }
 .close-btn:hover, .close-btn:focus {
@@ -504,7 +505,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   /* Отступ чекбокса от кнопки отправки формы */
-  margin-bottom: 31px;
+  margin-bottom: 20px;
   /* Стиль текста чекбокса */
   font-size: 12px;
   line-height: 1.1666666667;
@@ -521,6 +522,11 @@ body {
   /* Отключение непрозрачности иконки неотмеченного чекбокса при переключении */
   /* Включение непрозрачности иконки отмеченного чекбокса при переключении */
   /* Цвет и подчеркивание ссылки модального окна */
+}
+@media screen and (min-width: 480px) {
+  .checkbox {
+    margin-bottom: 31px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .checkbox {
@@ -586,6 +592,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 .header__logo {
   /* Цвет и отступ логотипа в шапке  */
@@ -715,7 +722,6 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-left: auto;
     margin: 0;
     gap: 10px;
   }
@@ -1454,10 +1460,15 @@ body {
   /* Блочная модель для вертикальной геометрии и правильного расположения */
   display: block;
   margin-bottom: 12px;
-  font-size: 20px;
+  font-size: 15px;
   line-height: 1.5;
   text-align: center;
   color: var(--secondary-color);
+}
+@media screen and (min-width: 480px) {
+  .form__title {
+    font-size: 20px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .form__title {
@@ -1466,6 +1477,11 @@ body {
 }
 .form__group {
   margin-bottom: 20px;
+}
+@media screen and (max-width: 479px) {
+  .form__group {
+    margin-bottom: 15px;
+  }
 }
 .form__label {
   position: relative;
@@ -1480,6 +1496,11 @@ body {
 .form__label:not(:last-child) {
   margin-bottom: 10px;
 }
+@media screen and (max-width: 479px) {
+  .form__label:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
 .form__text {
   /* Вертикальный отступ от текста меток */
   display: block;
@@ -1488,6 +1509,11 @@ body {
   line-height: 1.1666666667;
   letter-spacing: 0.01em;
   color: #757575;
+}
+@media screen and (max-width: 479px) {
+  .form__text {
+    font-size: 11px;
+  }
 }
 .form__icon {
   width: 18px;
@@ -1511,6 +1537,11 @@ body {
   font-size: 14px;
   line-height: 1.1428571429;
   color: var(--secondary-color);
+}
+@media screen and (max-width: 479px) {
+  .form__input, .form__textarea {
+    font-size: 12px;
+  }
 }
 .form__input:focus-within, .form__textarea:focus-within {
   border-color: var(--accent-color);
@@ -1570,6 +1601,16 @@ body {
       flex-wrap: wrap;
   gap: 10px;
 }
+@media screen and (max-width: 400px) {
+  .mobile-menu__socials {
+    gap: 7px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .mobile-menu__socials {
+    gap: 5px;
+  }
+}
 @media screen and (min-width: 768px) {
   .mobile-menu__socials {
     display: none;
@@ -1579,6 +1620,16 @@ body {
   padding-right: 10px;
   border-right: 1px solid var(--form-border);
 }
+@media screen and (max-width: 400px) {
+  .mobile-menu__item {
+    padding-right: 7px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .mobile-menu__item {
+    padding-right: 5px;
+  }
+}
 .mobile-menu__item:last-child {
   padding-right: 0;
   border: none;
@@ -1586,8 +1637,35 @@ body {
 .mobile-menu__link {
   font-weight: 500;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 1.2222222222;
   color: var(--accent-color);
+}
+@media screen and (max-width: 425px) {
+  .mobile-menu__link {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .mobile-menu__link {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .mobile-menu__link {
+    font-size: 12px;
+  }
+}
+
+.menu-wrap {
+  position: absolute;
+  top: 10px;
+  right: 55px;
+}
+@media screen and (min-width: 768px) {
+  .menu-wrap {
+    position: static;
+    width: 100%;
+  }
 }
 
 .mobile-btn {
@@ -1597,8 +1675,6 @@ body {
   padding: 0px;
   margin: 0px;
   position: fixed;
-  top: 10px;
-  right: 15px;
   z-index: 3;
   -webkit-transition: fill var(--animation-global);
   transition: fill var(--animation-global);
